@@ -247,6 +247,9 @@ In Tableau, I created several charts and a dashboard showcasing Prada’s financ
 
 <b><a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/data_visualisation' target="_blank">Screenshots of various charts created.</a></b>
 
+![main_dashboard](https://github.com/user-attachments/assets/c8242d47-9898-405a-a5a9-23cd6cf41c66)
+
+
 <h1>Key Insights and Recommendations</h1>
 
 The analysis of Prada’s financial data (2013-2023) revealed several important insights and strategic recommendations:
