@@ -15,8 +15,7 @@ Prada, a renowed luxury fashion house, is known for its high-end clothing, leath
 - <b>Tableau</b> for data visualisation and dashboard creation.
 - <b>Excel</b> for inital data exploration and validation.
 
-<h2>Project Workflow</h2>
-<h3>1. Define Scope and Metrics</h3>
+<h2>1. Define Scope and Metrics</h2>
 
 The scope of the project focused on analysis financial perofrmance data, with the primary metrics including
 - Total revenue.
@@ -25,13 +24,13 @@ The scope of the project focused on analysis financial perofrmance data, with th
 - Regional and brand revenue breakdown.
 - Year-on-year growth in key metrics.
 
-<h3>2. Data collection and Database Setup</h3>
+<h2>2. Data collection and Database Setup</h2>
 To begin the project, I sourced Prada’s annual financial reports from 2013 to 2023. These reports provided the key data on financial performance, including revenue, profit, EBITDA, and regional contributions.
 
-<h4>Data Extraction:</h4>
+<h3>Data Extraction:</h3>
 To streamline the extraction of key financial metrics from these reports, I utilised ChatGPT to gather and summarise critical figures such as total revenue, net income, EBITDA, and other relevant KPIs from each year’s report. This allowed for a more efficient extraction process across the 10-year period.
 
-<h4>Data Organisation:</h4>
+<h3>Data Organisation:</h3>
 
 Once the data was collected, I organised it into separate tables using Excel, ensuring that each table represented a distinct aspect of Prada’s financial performance:
 - <b>Financial Metrics:</b> Containing total revenue, EBITDA, net income, gross margin, EBIT, and total number of stores.
@@ -42,13 +41,13 @@ Once the data was collected, I organised it into separate tables using Excel, en
 
 Once the tables were structured, I saved them in CSV format for further analysis using Python, SQL, and Tableau. The following entity relationship diagram (ERD) was created to represent the relationships between the tables and facilitate efficient querying.
 
-<h4>Entity Relationship Diagram (ERD)</h4>
+<h3>Entity Relationship Diagram (ERD)</h3>
 
 ![entity_relationship_diagram](https://github.com/user-attachments/assets/3b0f0be6-2501-4db8-b9ea-737a5d4ce133)
 
 This diagram showcases how the data tables are linked, with financial metrics serving as the primary data source, and supporting tables for brands, products, and regions.
 
-<h4>Database and Table Creation</h4>
+<h3>Database and Table Creation</h3>
 
 ```sql 
 CREATE DATABASE prada_financial_data;
@@ -110,15 +109,15 @@ COPY brand_revenue FROM '/Users/rahul/Documents/Analyst/Projects/Prada Financial
 COPY sales_contribution FROM '/Users/rahul/Documents/Analyst/Projects/Prada Financial Analysis/Annual Reports/Tables/csv/sales_contribution.csv' DELIMITER ',' CSV HEADER;
 ```
 
-<h3>3. Data Cleaning and Preparation with SQL and Python</h3>
+<h2>3. Data Cleaning and Preparation with SQL and Python</h2>
 
 Once the database was set up with the relevant tables, the next step was to clean and prepare the data for analysis. During data collection, the accuracy of the financial reports was verified before manually entering the key metrics into the tables. After entering the data into the PostgreSQL database, the data was further validated by checking for missing values, ensuring consistency across datasets, and verifying that all expected entries were present for the specified years (2013-2023).
 
-<b>1.	Loading the Data into PostgreSQL:</b>
+<h3>Loading the Data into PostgreSQL:</h3>
 
 - CSV files were loaded into the respective tables within the PostgreSQL database using the COPY command to populate each table with the relevant data from the annual reports.
 
-<b>2.	Python Connection to PostgreSQL:</b>
+<h3>Python Connection to PostgreSQL:</h3>
 
 - Using psycopg2, a connection was established to the PostgreSQL database from Python. This allowed data to be queried directly into pandas DataFrames for further cleaning and analysis.
 ```python 
@@ -130,7 +129,7 @@ conn = psycopg2.connect(
 )
 ```
 
-<b>3. Querying Data from Multiple Tables:</b>
+<h3>Querying Data from Multiple Tables:</h3>
 
 - SQL queries were written to fetch data from multiple tables. Each query was executed, and the results were loaded into individual pandas DataFrames for further processing.
 - Example query:
@@ -139,7 +138,7 @@ query_financial = "SELECT * FROM financial_metrics"
 df_financial = pd.read_sql(query_financial, conn)
 ```
 
-<b>4.	Checking for Missing Values:</b>
+<h3>Checking for Missing Values:</h3>
 
 - After loading the data into pandas, the first step in cleaning was to identify any missing values across all tables. The .isnull().sum() function was used to count the missing values in each column.
 - Example:
@@ -148,7 +147,7 @@ print(df_financial.isnull().sum())
 ```
 ![is_null_sum](https://github.com/user-attachments/assets/4552c4be-51af-4a28-b496-96729c3b158e)
 
-<b>5.	Ensuring Data Completeness:</b>
+<h3>Ensuring Data Completeness:</h3>
 
 - The data was checked to ensure that all expected years (2013-2023) were present across all tables. This was a critical step to guarantee consistency across the various datasets.
 - Example:
@@ -157,7 +156,7 @@ print(df_financial['year'].unique())
 ```
 ![year_unique](https://github.com/user-attachments/assets/e071221c-5c7c-4881-b1c0-348ba84c4376)
 
-<b>6.	Data Type Consistency:</b>
+<h3>Data Type Consistency:</h3>
 
 - The .info() method was used to verify that the data types of each column were correct and suitable for analysis. This included ensuring that numerical columns were in the correct decimal format and categorical columns were strings.
 - Example:
@@ -167,3 +166,52 @@ print(df_financial.info())
 ![table_info](https://github.com/user-attachments/assets/b0f9bda4-eef5-4f99-944b-01970ba741e1)
 
 Through these steps, the data was cleaned, validated, and prepared for analysis, ensuring that it was ready for use in the subsequent stages of the project, including analysis and visualisation in Tableau.
+
+<h2>4. Exploratory Data Analysis with SQL and Python</h2>
+
+The exploratory data analysis (EDA) was conducted using SQL to extract key financial data from the database and Python (pandas and matplotlib) to visualise the insights. This section outlines how the data was extracted, analysed, and summarised to understand Prada’s financial performance from 2013 to 2023.
+
+<h3>SQL Queries for Data Extraction</h3>
+
+To gather data from the PostgreSQL database, I wrote and executed various SQL queries to extract key metrics related to revenue, EBITDA, brand performance, product categories, and more. Below are the SQL queries used. 
+
+The full list of SQL queries can be found here. 
+- Example - Track year-on-year growth for total revenue and EBITDA:
+```sql 
+WITH revenue_ebitda_growth AS (
+  SELECT year, total_revenue_million_euro, 
+         LAG(total_revenue_million_euro) OVER (ORDER BY year) AS prev_year_revenue,
+         ebitda_million_euro,
+         LAG(ebitda_million_euro) OVER (ORDER BY year) AS prev_year_ebitda
+  FROM financial_metrics
+)
+SELECT year,
+       ROUND((total_revenue_million_euro - prev_year_revenue) / prev_year_revenue * 100, 2) AS yoy_revenue_growth,
+       ROUND((ebitda_million_euro - prev_year_ebitda) / prev_year_ebitda * 100, 2) AS yoy_ebitda_growth
+FROM revenue_ebitda_growth
+WHERE prev_year_revenue IS NOT NULL;
+```
+<h3>Data Analysis and Visualisation in Python</h3>
+
+After extracting the data, we used Python’s matplotlib library to generate a variety of charts that visualised the insights. The charts included line graphs, stacked bar charts, and area charts to analyse trends in various key metrics. We leveraged pandas for data manipulation and matplotlib for visualisation, enabling a clear representation of the financial trends and insights.
+
+The full Python EDA script and charts can be found here.
+
+An example Python code used to generate regional revenue performance as a stacked area chart:
+```python 
+# Plot Regional Revenue Performance (Stacked Area Plot)
+df_regional_pivot.plot(kind='area', stacked=True, figsize=(10, 6))
+plt.title('Regional Revenue Performance Over Time')
+plt.xlabel('Year')
+plt.ylabel('Revenue (Million €)')
+plt.legend(title='Region')
+plt.grid(True)
+plt.show()
+```
+![regional_revenue_performance_over_time](https://github.com/user-attachments/assets/c1ea4c80-b266-494f-965f-d44b974b5e3d)
+
+<h3>Key Findings from the Analysis</h3>
+
+- <b>Revenue Recovery and Brand Performance:</b> Despite a significant revenue and EBITDA dip in 2020, both recovered strongly in 2021. Prada dominated brand revenue, with leather goods contributing the most across all product categories.
+- <b>Regional and Sales Insights:</b> Europe and Asia Pacific were the highest revenue-generating regions, while retail sales consistently made up a larger share of revenue compared to wholesale.
+- <b>Store Efficiency:</b> Although the number of stores slightly decreased after 2019, revenue per store saw significant growth, particularly in 2021 and 2022, indicating improved store efficiency.
