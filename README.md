@@ -2,6 +2,19 @@
 
 <img src="https://github.com/user-attachments/assets/c607eede-ded0-4ab1-9bd7-3736306b01ec" width="800" height="300"/>
 
+<h1>Table of Contents</h1>
+
+- [Project Overview](#project-overview)
+- [Project Workflow](#project-workflow)
+- [1. Define Scope and Metrics](#1-define-scope-and-metrics)
+- [2. Data collection and Database Setup](#2-data-collection-and-database-setup)
+- [3. Data Cleaning and Preparation with SQL and Python](#3-data-cleaning-and-preparation-with-sql-and-python)
+- [4. Exploratory Data Analysis with SQL and Python](#4-exploratory-data-analysis-with-sql-and-python)
+- [5. Data Visualisation in Tableau](#5-data-visualisation-in-tableau)
+- [Key Insights and Recommendations](#key-insights-and-recommendations)
+- [Conclusion](#conclusion)
+
+<h1>Project Overview</h1>
 
 <h3>Objective</h3>
 Prada, a renowed luxury fashion house, is known for its high-end clothing, leather goods, and accessories. This project aimed to analyse Prada's financial performance over the past decade, focusing on key metrics scuh as revenue, profit, and regional performance. By using tools such as PostgreSQL, Python, and Tableau, the project uncovers insights that reveal which regions, brands, and products drove growth, and provides recommendations for future business strategies.
