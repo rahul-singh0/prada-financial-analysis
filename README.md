@@ -117,7 +117,7 @@ COPY sales_contribution FROM '/Users/rahul/Documents/Analyst/Projects/Prada Fina
 
 Once the database was set up with the relevant tables, the next step was to clean and prepare the data for analysis. During data collection, the accuracy of the financial reports was verified before manually entering the key metrics into the tables. After entering the data into the PostgreSQL database, the data was further validated by checking for missing values, ensuring consistency across datasets, and verifying that all expected entries were present for the specified years (2013-2023).
 
-<b>You can access the data validation files <a href='https://github.com/rahul-singh0/prada-financial-analysis/blob/main/data_cleaning_preparation/data_validation.py'>here</a></b>
+<b>You can access the data validation file <a href='https://github.com/rahul-singh0/prada-financial-analysis/blob/main/data_cleaning_preparation/data_validation.py'>here</a></b>
 
 <h3>Loading the Data into PostgreSQL:</h3>
 
@@ -177,11 +177,12 @@ Through these steps, the data was cleaned, validated, and prepared for analysis,
 
 The exploratory data analysis (EDA) was conducted using SQL to extract key financial data from the database and Python (pandas and matplotlib) to visualise the insights. This section outlines how the data was extracted, analysed, and summarised to understand Prada’s financial performance from 2013 to 2023.
 
+<b>You can access the data analysis files <a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/data_analysis'>here</a></b>
+
 <h3>SQL Queries for Data Extraction</h3>
 
-To gather data from the PostgreSQL database, I wrote and executed various SQL queries to extract key metrics related to revenue, EBITDA, brand performance, product categories, and more. Below are the SQL queries used. 
+To gather data from the PostgreSQL database, I wrote and executed various SQL queries to extract key metrics related to revenue, EBITDA, brand performance, product categories, and more.
 
-The full list of SQL queries can be found here. 
 - Example - Track year-on-year growth for total revenue and EBITDA:
 ```sql 
 WITH revenue_ebitda_growth AS (
@@ -200,8 +201,6 @@ WHERE prev_year_revenue IS NOT NULL;
 <h3>Data Analysis and Visualisation in Python</h3>
 
 After extracting the data, we used Python’s matplotlib library to generate a variety of charts that visualised the insights. The charts included line graphs, stacked bar charts, and area charts to analyse trends in various key metrics. We leveraged pandas for data manipulation and matplotlib for visualisation, enabling a clear representation of the financial trends and insights.
-
-The full Python EDA script and charts can be found here.
 
 An example Python code used to generate regional revenue performance as a stacked area chart:
 ```python 
