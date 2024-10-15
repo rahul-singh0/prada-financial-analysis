@@ -6,11 +6,11 @@
 
 - [Project Overview](#project-overview)
 - [Project Workflow](#project-workflow)
-- [1. Define Scope and Metrics](#1-define-scope-and-metrics)
-- [2. Data collection and Database Setup](#2-data-collection-and-database-setup)
-- [3. Data Cleaning and Preparation with SQL and Python](#3-data-cleaning-and-preparation-with-sql-and-python)
-- [4. Exploratory Data Analysis with SQL and Python](#4-exploratory-data-analysis-with-sql-and-python)
-- [5. Data Visualisation in Tableau](#5-data-visualisation-in-tableau)
+    - [1. Define Scope and Metrics](#1-define-scope-and-metrics)
+    - [2. Data collection and Database Setup](#2-data-collection-and-database-setup)
+    - [3. Data Cleaning and Preparation with SQL and Python](#3-data-cleaning-and-preparation-with-sql-and-python)
+    - [4. Exploratory Data Analysis with SQL and Python](#4-exploratory-data-analysis-with-sql-and-python)
+    - [5. Data Visualisation in Tableau](#5-data-visualisation-in-tableau)
 - [Key Insights and Recommendations](#key-insights-and-recommendations)
 - [Conclusion](#conclusion)
 
