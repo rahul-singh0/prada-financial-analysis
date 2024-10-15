@@ -1,4 +1,8 @@
 # Prada Financial Analysis 2013-2023
+
+<img src="https://github.com/user-attachments/assets/c607eede-ded0-4ab1-9bd7-3736306b01ec" width="800" height="300"/>
+
+
 <h3>Objective</h3>
 Prada, a renowed luxury fashion house, is known for its high-end clothing, leather goods, and accessories. This project aimed to analyse Prada's financial performance over the past decade, focusing on key metrics scuh as revenue, profit, and regional performance. By using tools such as PostgreSQL, Python, and Tableau, the project uncovers insights that reveal which regions, brands, and products drove growth, and provides recommendations for future business strategies.
 
