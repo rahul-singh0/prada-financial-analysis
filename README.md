@@ -111,3 +111,57 @@ COPY sales_contribution FROM '/Users/rahul/Documents/Analyst/Projects/Prada Fina
 ```
 
 <h3>3. Data Cleaning and Preparation with SQL and Python</h3>
+
+Once the database was set up with the relevant tables, the next step was to clean and prepare the data for analysis. This was done by connecting to the PostgreSQL database, extracting the data, checking for missing values, and ensuring consistency in the dataset.
+
+1.	Loading the Data into PostgreSQL:
+
+- CSV files were loaded into the respective tables within the PostgreSQL database using the COPY command to populate each table with the relevant data from the annual reports.
+
+2.	Python Connection to PostgreSQL:
+
+- Using psycopg2, a connection was established to the PostgreSQL database from Python. This allowed data to be queried directly into pandas DataFrames for further cleaning and analysis.
+```python 
+import psycopg2
+conn = psycopg2.connect(
+    host="localhost",
+    database="prada_financial_data",
+    user="rahul"
+)
+```
+
+3. Querying Data from Multiple Tables:
+
+- SQL queries were written to fetch data from multiple tables. Each query was executed, and the results were loaded into individual pandas DataFrames for further processing.
+- Example query:
+```python 
+query_financial = "SELECT * FROM financial_metrics"
+df_financial = pd.read_sql(query_financial, conn)
+```
+
+4.	Checking for Missing Values:
+
+- After loading the data into pandas, the first step in cleaning was to identify any missing values across all tables. The .isnull().sum() function was used to count the missing values in each column.
+- Example:
+```python 
+print(df_financial.isnull().sum())
+```
+![is_null_sum](https://github.com/user-attachments/assets/4552c4be-51af-4a28-b496-96729c3b158e)
+
+5.	Ensuring Data Completeness:
+
+- The data was checked to ensure that all expected years (2013-2023) were present across all tables. This was a critical step to guarantee consistency across the various datasets.
+- Example:
+```python 
+print(df_financial['year'].unique())
+```
+![year_unique](https://github.com/user-attachments/assets/e071221c-5c7c-4881-b1c0-348ba84c4376)
+
+6.	Data Type Consistency:
+
+- The .info() method was used to verify that the data types of each column were correct and suitable for analysis. This included ensuring that numerical columns were in the correct decimal format and categorical columns were strings.
+- Example:
+```python 
+print(df_financial.info())
+```
+![table_info](https://github.com/user-attachments/assets/b0f9bda4-eef5-4f99-944b-01970ba741e1)
