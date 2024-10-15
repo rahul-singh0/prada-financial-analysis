@@ -15,6 +15,7 @@ Prada, a renowed luxury fashion house, is known for its high-end clothing, leath
 - <b>Tableau</b> for data visualisation and dashboard creation.
 - <b>Excel</b> for inital data exploration and validation.
 
+<h1>Project Workflow</h1>
 <h2>1. Define Scope and Metrics</h2>
 
 The scope of the project focused on analysis financial perofrmance data, with the primary metrics including
@@ -220,3 +221,12 @@ plt.show()
 - <b>Revenue Recovery and Brand Performance:</b> Despite a significant revenue and EBITDA dip in 2020, both recovered strongly in 2021. Prada dominated brand revenue, with leather goods contributing the most across all product categories.
 - <b>Regional and Sales Insights:</b> Europe and Asia Pacific were the highest revenue-generating regions, while retail sales consistently made up a larger share of revenue compared to wholesale.
 - <b>Store Efficiency:</b> Although the number of stores slightly decreased after 2019, revenue per store saw significant growth, particularly in 2021 and 2022, indicating improved store efficiency.
+
+<h2>5. Data Visualisation in Tableau</h2>
+    
+In Tableau, I created several charts and a dashboard showcasing Prada’s financial performance from 2013 to 2023. The dashboard features visualisations of revenue, EBITDA, net income trends, brand performance, and a regional revenue breakdown, with a region filter applied specifically to the regional chart for detailed analysis.
+
+<b><a href='https://public.tableau.com/app/profile/rahul.singh4526/viz/PradaFinancialPerformanceOverview2013-2023/PradaFinancialPerformanceOverview'>Tableau Dashboard - Prada Financial Performance Overview (2013-2023)</a><b>
+
+<b><a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/data_visualisation'>Screenshots of various charts created.</a></b>
+
