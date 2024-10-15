@@ -42,7 +42,7 @@ Once the data was collected, I organised it into separate tables using Excel, en
 
 Once the tables were structured, I saved them in CSV format for further analysis using Python, SQL, and Tableau. 
 
-<b>You can acccess the CSV files <a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/annual_reports_csv'>here</a>.</b> 
+<b><a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/annual_reports_csv'>Annual reports CSV files</a>.</b> 
 
 The following entity relationship diagram (ERD) was created to represent the relationships between the tables and facilitate efficient querying.
 
@@ -118,7 +118,7 @@ COPY sales_contribution FROM '/Users/rahul/Documents/Analyst/Projects/Prada Fina
 
 Once the database was set up with the relevant tables, the next step was to clean and prepare the data for analysis. During data collection, the accuracy of the financial reports was verified before manually entering the key metrics into the tables. After entering the data into the PostgreSQL database, the data was further validated by checking for missing values, ensuring consistency across datasets, and verifying that all expected entries were present for the specified years (2013-2023).
 
-<b>You can access the data validation file <a href='https://github.com/rahul-singh0/prada-financial-analysis/blob/main/data_cleaning_preparation/data_validation.py'>here</a></b>
+<b><a href='https://github.com/rahul-singh0/prada-financial-analysis/blob/main/data_cleaning_preparation/data_validation.py'>Data validation file.</a></b>
 
 <h3>Loading the Data into PostgreSQL:</h3>
 
@@ -178,7 +178,7 @@ Through these steps, the data was cleaned, validated, and prepared for analysis,
 
 The exploratory data analysis (EDA) was conducted using SQL to extract key financial data from the database and Python (pandas and matplotlib) to visualise the insights. This section outlines how the data was extracted, analysed, and summarised to understand Prada’s financial performance from 2013 to 2023.
 
-<b>You can access the data analysis files <a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/data_analysis'>here</a></b>
+<b><a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/data_analysis'>Data analysis files.</a></b>
 
 <h3>SQL Queries for Data Extraction</h3>
 
