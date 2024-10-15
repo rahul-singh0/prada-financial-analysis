@@ -39,7 +39,11 @@ Once the data was collected, I organised it into separate tables using Excel, en
 - <b>Regional Revenue:</b> Displaying revenue by geographic regions including Americas, Asia Pacific, Europe, Japan, and the Middle East.
 - <b>Sales Contribution:</b> Dividing sales into retail and wholesale percentages.
 
-Once the tables were structured, I saved them in CSV format for further analysis using Python, SQL, and Tableau. The following entity relationship diagram (ERD) was created to represent the relationships between the tables and facilitate efficient querying.
+Once the tables were structured, I saved them in CSV format for further analysis using Python, SQL, and Tableau. 
+
+<b>You can acccess the CSV files <a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/annual_reports_csv'>here</a>.</b> 
+
+The following entity relationship diagram (ERD) was created to represent the relationships between the tables and facilitate efficient querying.
 
 <h3>Entity Relationship Diagram (ERD)</h3>
 
