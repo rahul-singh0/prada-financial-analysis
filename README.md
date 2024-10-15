@@ -201,7 +201,7 @@ WHERE prev_year_revenue IS NOT NULL;
 ```
 <h3>Data Analysis and Visualisation in Python</h3>
 
-After extracting the data, we used Python’s matplotlib library to generate a variety of charts that visualised the insights. The charts included line graphs, stacked bar charts, and area charts to analyse trends in various key metrics. We leveraged pandas for data manipulation and matplotlib for visualisation, enabling a clear representation of the financial trends and insights.
+After extracting the data, I used Python’s matplotlib library to generate a variety of charts that visualised the insights. The charts included line graphs, stacked bar charts, and area charts to analyse trends in various key metrics. I leveraged pandas for data manipulation and matplotlib for visualisation, enabling a clear representation of the financial trends and insights.
 
 An example Python code used to generate regional revenue performance as a stacked area chart:
 ```python 
@@ -226,7 +226,24 @@ plt.show()
     
 In Tableau, I created several charts and a dashboard showcasing Prada’s financial performance from 2013 to 2023. The dashboard features visualisations of revenue, EBITDA, net income trends, brand performance, and a regional revenue breakdown, with a region filter applied specifically to the regional chart for detailed analysis.
 
-<b><a href='https://public.tableau.com/app/profile/rahul.singh4526/viz/PradaFinancialPerformanceOverview2013-2023/PradaFinancialPerformanceOverview'>Tableau Dashboard - Prada Financial Performance Overview (2013-2023)</a><b>
+<b><a href='https://public.tableau.com/app/profile/rahul.singh4526/viz/PradaFinancialPerformanceOverview2013-2023/PradaFinancialPerformanceOverview'>Tableau Dashboard - Prada Financial Performance Overview (2013-2023)</a></b>
 
 <b><a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/data_visualisation'>Screenshots of various charts created.</a></b>
 
+<h1>Key Insights and Recommendations</h1>
+
+The analysis of Prada’s financial data (2013-2023) revealed several important insights and strategic recommendations:
+
+- <b>Revenue Recovery:</b> Prada’s revenue rebounded significantly after the 2020 pandemic-related dip, with the Asia Pacific region leading this recovery. To capitalise on this growth, it is recommended that Prada prioritise further investment in high-growth regions, particularly China, through both physical store expansion and strengthened e-commerce efforts.
+- <b>Profitability Trends:</b> Profitability improved steadily in recent years, driven by stronger margins and cost control. Prada should continue optimising its store network by closing underperforming locations and transitioning to more digitally integrated, smaller retail spaces to boost overall profitability.
+- <b>Brand Performance:</b> While Prada remained the dominant brand, Miu Miu showed notable growth. It is recommended that Prada further invest in Miu Miu by expanding its product offerings and enhancing its marketing to target new customer segments.
+- <b>Regional Insights:</b> Europe and Asia Pacific remained the strongest regions, while the Americas grew at a slower pace, and the Middle East saw consistent improvement. Prada should continue to enhance its presence in these regions, particularly by bolstering its e-commerce capabilities in the Middle East to tap into the emerging digital market.
+- <b>Product Category Focus:</b> Leather goods consistently contributed the most to revenue. Prada can further optimise its inventory by focusing on high-demand categories, reducing waste, and increasing profitability through better inventory management.
+
+By aligning its strategy with these insights, Prada can ensure sustained growth, enhanced profitability, and continued market leadership across regions and brands.
+
+<h1>Conclusion</h1>
+
+The Prada Financial Analysis (2013-2023) provided valuable insights into the company’s financial performance, highlighting key trends in revenue growth, brand performance, and regional differences. Despite challenges such as incomplete early data and the impact of the COVID-19 pandemic, the analysis identified strategic areas for Prada’s growth, including focusing on high-growth regions like Asia Pacific, enhancing e-commerce, and optimising its store network.
+
+Key learnings from the project emphasised the importance of region-specific strategies and the value of data visualisation in uncovering actionable insights. These findings offer clear recommendations to help Prada maintain profitability and drive future expansion.
