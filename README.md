@@ -27,10 +27,10 @@ Prada, a renowed luxury fashion house, is known for its high-end clothing, leath
 
 <h3>Tools and Technologies Used</h3>
 
+- <b>Excel</b> for inital data exploration and validation.
 - <b>PostgreSQL</b> for data storage and querying.
 - <b>Python</b> for data processing, cleaning, and analysis.
 - <b>Tableau</b> for data visualisation and dashboard creation.
-- <b>Excel</b> for inital data exploration and validation.
 
 <h1>Project Workflow</h1>
 <h2>1. Define Scope and Metrics</h2>
