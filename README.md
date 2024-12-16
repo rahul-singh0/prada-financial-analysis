@@ -247,7 +247,7 @@ In Tableau, I created several charts and a dashboard showcasing Prada’s financ
 
 <b><a href='https://github.com/rahul-singh0/prada-financial-analysis/tree/main/data_visualisation' target="_blank">Screenshots of various charts created.</a></b>
 
-![main_dashboard](https://github.com/user-attachments/assets/c8242d47-9898-405a-a5a9-23cd6cf41c66)
+![Screenshot 2024-12-16 at 17 01 27](https://github.com/user-attachments/assets/fbb12f1c-610d-4e2d-b9fb-ff3f34d87913)
 
 
 <h1>Key Insights and Recommendations</h1>
